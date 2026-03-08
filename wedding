@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Junyoung & Yeonsu</title>
+  <meta name="description" content="Junyoung & Yeonsu Wedding Invitation" />
+  <style>
+    :root {
+      --bg: #f6f1ea;
+      --paper: rgba(255,255,255,0.72);
+      --text: #2f2a26;
+      --muted: #6f665f;
+      --line: rgba(47,42,38,0.12);
+      --accent: #8b6f5c;
+      --shadow: 0 20px 50px rgba(47,42,38,0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Georgia", "Times New Roman", serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(255,255,255,0.9), transparent 45%),
+        linear-gradient(180deg, #f9f5ef 0%, #f6f1ea 55%, #f2ebe3 100%);
+      line-height: 1.65;
+    }
+
+    .wrap {
+      width: min(720px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 72px;
+    }
+
+    .card {
+      background: var(--paper);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.7);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero {
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .hero-inner {
+      width: 100%;
+      padding: 54px 28px 42px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(40px, 8vw, 72px);
+      line-height: 0.95;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+    }
+
+    .amp {
+      display: block;
+      margin: 10px 0;
+      font-size: clamp(24px, 5vw, 38px);
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .sub {
+      margin: 28px auto 0;
+      max-width: 500px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .date {
+      margin-top: 28px;
+      font-size: 18px;
+      letter-spacing: 0.08em;
+    }
+
+    .scroll {
+      display: inline-block;
+      margin-top: 28px;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 4px;
+    }
+
+    section {
+      margin-top: 18px;
+      padding: 34px 24px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 14px;
+    }
+
+    .message {
+      font-size: clamp(20px, 4.2vw, 30px);
+      line-height: 1.45;
+      margin: 0;
+      text-align: center;
+    }
+
+    .info-grid {
+      display: grid;
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .info-item {
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .label {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .value {
+      font-size: 20px;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .ph {
+      aspect-ratio: 4 / 5;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(139,111,92,0.18), rgba(255,255,255,0.9));
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+      padding: 12px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.7);
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      padding-top: 6px;
+    }
+
+    @media (max-width: 640px) {
+      .hero-inner { padding: 44px 20px 36px; }
+      section { padding: 28px 20px; }
+      .gallery { grid-template-columns: 1fr; }
+      .value { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="card hero-inner">
+        <div class="eyebrow">Wedding Invitation</div>
+        <h1>Junyoung</h1>
+        <span class="amp">&amp;</span>
+        <h1>Yeonsu</h1>
+        <p class="sub">We invite you to celebrate the beginning of our forever with the people we cherish most.</p>
+        <div class="date">18:20 Sunday · June 7, 2026</div>
+        <a class="scroll" href="#details">Wedding Details</a>
+      </div>
+    </section>
+
+    <section id="message" class="card">
+      <div class="section-title">Our Invitation</div>
+      <p class="message">소중한 가족과 친구들 앞에서<br />저희의 새로운 시작을 함께하고자 합니다.</p>
+    </section>
+
+    <section id="details" class="card">
+      <div class="section-title">Wedding Details</div>
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="label">Date &amp; Time</div>
+          <div class="value">2026년 6월 7일 일요일 오후 6시 20분</div>
+        </div>
+        <div class="info-item">
+          <div class="label">Venue</div>
+          <div class="value">라비두스 Laviedouce</div>
+          <div class="muted">서울 중구 필동로 5길 7</div>
+        </div>
+        <div class="info-item">
+          <div class="label">Mobile Invitation</div>
+          <div class="value">준영 &amp; 연수의 웨딩 웹사이트</div>
+          <div class="muted">사진, 안내, 추억을 오래 간직할 수 있는 개인 페이지</div>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="btn" href="https://map.naver.com/" target="_blank" rel="noreferrer">지도 열기</a>
+        <a class="btn" href="#gallery">사진 보기</a>
+      </div>
+    </section>
+
+    <section id="gallery" class="card">
+      <div class="section-title">Gallery</div>
+      <div class="gallery">
+        <div class="ph">대표 웨딩 사진 1<br />여기에 이미지 넣기</div>
+        <div class="ph">대표 웨딩 사진 2<br />여기에 이미지 넣기</div>
+        <div class="ph">대표 웨딩 사진 3<br />여기에 이미지 넣기</div>
+        <div class="ph">대표 웨딩 사진 4<br />여기에 이미지 넣기</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-title">Contact</div>
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="label">Groom</div>
+          <div class="value">박준영</div>
+        </div>
+        <div class="info-item">
+          <div class="label">Bride</div>
+          <div class="value">박연수</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">With love, Junyoung &amp; Yeonsu</div>
+  </main>
+</body>
+</html>
